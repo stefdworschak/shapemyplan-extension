@@ -1,0 +1,24 @@
+{
+    "name": "Shape My Plan Shopping List",
+    "version": "1.0",
+    "description": "Extracts all Shopping List items from 'Shape my Plan'",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "popup.html"
+      },
+    "background": {
+        "scripts": ["jquery.min.js","background.js"]
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://shapemyplan.com/*", "https://shapemyplan.com/*"],
+          "js": ["jquery.min.js", "content.js"]
+        }
+      ],
+    "web_accessible_resources": ["jquery.min.js"],
+    "icons": { 
+        "16": "16.png",
+        "48": "48.png",
+       "128": "128.png"
+    }
+  }
